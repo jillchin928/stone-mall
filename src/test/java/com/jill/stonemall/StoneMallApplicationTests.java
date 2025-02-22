@@ -1,4 +1,4 @@
-package com.jill.stone_mall;
+package com.jill.stonemall;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

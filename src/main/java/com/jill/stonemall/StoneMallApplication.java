@@ -1,4 +1,4 @@
-package com.jill.stone_mall;
+package com.jill.stonemall;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

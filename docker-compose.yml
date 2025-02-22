@@ -1,0 +1,20 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: smdb_mysql_container
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password #設定 MySQL root 用戶的密碼（需與 application.properties 中的密碼相同）
+      MYSQL_DATABASE: smdb #設定初始資料庫名稱
+    ports:
+      - "3306:3306" #將 MySQL 容器的 3306 埠對應到本機的 3306 埠。
+    volumes:
+      - mysql_data:/var/lib/mysql #將資料庫的資料持久化到本機，避免容器重啟時丟失資料。
+    networks:
+      - stone_mall_network
+
+volumes:
+  mysql_data:
+
+networks:
+  stone_mall_network:
+    driver: bridge
